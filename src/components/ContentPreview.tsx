@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { GeneratedContent } from "../data/templates";
+import type { GeneratedContent } from "../data/templates";
 
 interface Props {
   content: GeneratedContent;

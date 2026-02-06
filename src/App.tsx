@@ -5,7 +5,7 @@ import { BlogGenerator } from "./components/BlogGenerator";
 import { BrandReference } from "./components/BrandReference";
 import { ContentStrategy } from "./components/ContentStrategy";
 import { ContentHistory } from "./components/ContentHistory";
-import { GeneratedContent } from "./data/templates";
+import type { GeneratedContent } from "./data/templates";
 
 export default function App() {
   const [history, setHistory] = useState<(GeneratedContent & { id: string; createdAt: Date })[]>([]);

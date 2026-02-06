@@ -13,7 +13,8 @@ import {
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { PORTFOLIO_COMPANIES, CONTENT_THEMES, BRAND } from "../data/brand";
-import { BLOG_TEMPLATES, GeneratedContent } from "../data/templates";
+import { BLOG_TEMPLATES } from "../data/templates";
+import type { GeneratedContent } from "../data/templates";
 import { SYSTEM_PROMPT, BLOG_POST_PROMPT } from "../data/prompts";
 import { ContentPreview } from "./ContentPreview";
 import { generateWithAI } from "../lib/api";

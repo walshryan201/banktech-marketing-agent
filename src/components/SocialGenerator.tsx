@@ -11,8 +11,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { PORTFOLIO_COMPANIES, CONTENT_THEMES, SOCIAL_PLATFORMS, CONTENT_STRATEGY } from "../data/brand";
-import { LINKEDIN_TEMPLATES, TWITTER_TEMPLATES, GeneratedContent } from "../data/templates";
+import { PORTFOLIO_COMPANIES, CONTENT_THEMES, SOCIAL_PLATFORMS } from "../data/brand";
+import { LINKEDIN_TEMPLATES, TWITTER_TEMPLATES } from "../data/templates";
+import type { GeneratedContent } from "../data/templates";
 import { SYSTEM_PROMPT, SOCIAL_POST_PROMPT } from "../data/prompts";
 import { ContentPreview } from "./ContentPreview";
 import { generateWithAI } from "../lib/api";
@@ -87,8 +88,6 @@ export function SocialGenerator({ onGenerate }: Props) {
     // Use templates for instant generation (fallback or when AI not available/no prompt)
     setTimeout(() => {
       let content: GeneratedContent;
-      const templates = platform === "linkedin" ? LINKEDIN_TEMPLATES : TWITTER_TEMPLATES;
-      const templateFn = templates[theme as keyof typeof templates];
 
       if (platform === "linkedin") {
         switch (theme) {
